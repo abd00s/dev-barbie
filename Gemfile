@@ -9,8 +9,6 @@ gem 'mysql2', '>= 0.3.13', '< 0.5'
 gem 'sass-rails', '~> 5.0'
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-# Use CoffeeScript for .coffee assets and views
-gem 'coffee-rails', '~> 4.1.0'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 
@@ -32,9 +30,21 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'twitter-bootstrap-rails', '~> 3.2', '>= 3.2.2'
+gem 'therubyracer', '~> 0.12.2'
+gem 'less-rails', '~> 2.7', '>= 2.7.1'
+gem 'devise', '~> 4.1'
+gem 'rails_admin', '~> 0.8.1'
+gem 'cancancan', '~> 1.13', '>= 1.13.1'
+gem 'sendgrid', '~> 1.2', '>= 1.2.4'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug'
+  gem 'pry-rails'
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'awesome_print'
 end
 
 group :development do
