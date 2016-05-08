@@ -1,11 +1,31 @@
 <div class="container">
-  <div class="jumbotron col-xs-8 col- col-xs-offset-2">
+  <div class="jumbotron col-xs-8 col-xs-offset-2">
     <h1>Behold, the magic button.</h1>
     <p><%= link_to "Click me!", clicks_create_path, class: "btn btn-primary btn-lg", role: "button" %></p>
   </div>
 </div>
+
 <div class="container">
-  <div class="well well-lg col-xs-8 col- col-xs-offset-2">
+  <%= content_tag(:div, id: "chart", class: "col-xs-8 col-xs-offset-2",
+  data: {daym1: day_of_week(Date.today - 1),
+        daym2: day_of_week(Date.today - 2),
+        daym3: day_of_week(Date.today - 3),
+        daym4: day_of_week(Date.today - 4),
+        daym5: day_of_week(Date.today - 5),
+        daym6: day_of_week(Date.today - 6),
+        today: @clicks_from_today,
+        countm1: @clicks_from_1_day_ago,
+        countm2: @clicks_from_2_day_ago,
+        countm3: @clicks_from_3_day_ago,
+        countm4: @clicks_from_4_day_ago,
+        countm5: @clicks_from_5_day_ago,
+        countm6: @clicks_from_6_day_ago
+    }) do %>
+  <% end %>
+</div>
+
+<div class="container">
+  <div class="well well-lg col-xs-8 col-xs-offset-2">
     <p><%= @clicks.count %></p>
   </div>
 </div>
