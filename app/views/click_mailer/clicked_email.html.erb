@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+</head>
+<body>
+  <h3>Another shrimp on the dev barbie!</h3>
+  <p>User <%= @user.email %> has clicked the button on <%= pretty_date(@click) %>.</p>
+  <p>That brings the total clicks for today to: <%= Click.count_from(Date.today) %>.</p>
+  <p>Visit <%= link_to "text", root_url %> to see latest statistics.</p>
+</body>
+</html>
