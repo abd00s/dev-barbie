@@ -45,6 +45,9 @@ group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'awesome_print'
+  gem 'quiet_assets', '~> 1.1'
+  gem 'fabrication', '~> 2.15'
+  gem 'faker', '~> 1.6', '>= 1.6.3'
 end
 
 group :development do
