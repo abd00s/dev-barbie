@@ -37,6 +37,7 @@ gem 'devise', '~> 4.1'
 gem 'rails_admin', '~> 0.8.1'
 gem 'cancancan', '~> 1.13', '>= 1.13.1'
 gem 'sendgrid', '~> 1.2', '>= 1.2.4'
+gem 'highcharts-rails', '~> 4.2', '>= 4.2.5'
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
