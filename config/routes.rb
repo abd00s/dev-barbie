@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'clicks/create'
+
   get 'home/index'
 
   devise_for :users
