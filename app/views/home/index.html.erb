@@ -1,2 +1,11 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<div class="container">
+  <div class="jumbotron col-xs-8 col- col-xs-offset-2">
+    <h1>Behold, the magic button.</h1>
+    <p><%= link_to "Click me!", clicks_create_path, class: "btn btn-primary btn-lg", role: "button" %></p>
+  </div>
+</div>
+<div class="container">
+  <div class="well well-lg col-xs-8 col- col-xs-offset-2">
+    <p><%= @clicks.count %></p>
+  </div>
+</div>
