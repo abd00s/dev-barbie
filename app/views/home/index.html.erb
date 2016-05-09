@@ -1,12 +1,11 @@
 <% if user_signed_in? %>
-  <div class="container">
-    <div class="jumbotron col-xs-8 col-xs-offset-2">
-      <h1>Behold, the magic button.</h1>
-      <p><%= link_to "Click me!", clicks_create_path, class: "btn btn-primary btn-lg", id: "button", role: "button", remote: true %></p>
+  <div class="row">
+    <div class="col-xs-2">
+      <%= link_to "Click me!", clicks_create_path, class: "btn btn-primary btn-lg", id: "button", role: "button", remote: true %>
     </div>
-  </div>
 
-  <%= render :partial => "chart" %>
+    <%= render :partial => "chart" %>
+  </div>
 
 <% else %>
 <!-- Sign In/ Sign Up Panels -->
