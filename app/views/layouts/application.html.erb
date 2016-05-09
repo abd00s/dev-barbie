@@ -25,6 +25,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Account <span class="caret"></span></a>
               <ul class="dropdown-menu">
                 <li>Signed in as <%=current_user.email%></li>
+                <li><%= link_to "Admin Panel", rails_admin_url if current_user.is_admin?%></li>
                 <li><%= link_to "Edit Account", root_url %></li>
                 <li role="separator" class="divider"></li>
                 <li><%= link_to "Sign Out", destroy_user_session_path, method: :delete %></li>
