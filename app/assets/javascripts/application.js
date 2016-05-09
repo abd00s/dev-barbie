@@ -16,3 +16,9 @@
 //= require twitter/bootstrap
 //= require turbolinks
 //= require_tree .
+
+$(document).ready(function(){
+  setTimeout(function(){
+    $('#flash').hide('slow');
+  }, 3000);
+ })
