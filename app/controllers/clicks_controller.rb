@@ -5,8 +5,10 @@ class ClicksController < ApplicationController
       if @click.save
         # ClickMailer.clicked_email(current_user, @click).deliver_now
         format.html {redirect_to root_path, notice: 'One more shrimp on the barbie!'}
+        format.js {flash.now[:notice] = 'One more shrimp on the barbie!'}
       else
         format.html {redirect_to root_path, alert: 'Something went wrong'}
+        format.js {flash.now[:alert] = 'Something went wrong'}
       end
     end
   end

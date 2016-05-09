@@ -2,7 +2,7 @@
   <div class="container">
     <div class="jumbotron col-xs-8 col-xs-offset-2">
       <h1>Behold, the magic button.</h1>
-      <p><%= link_to "Click me!", clicks_create_path, class: "btn btn-primary btn-lg", role: "button" %></p>
+      <p><%= link_to "Click me!", clicks_create_path, class: "btn btn-primary btn-lg", id: "button", role: "button", remote: true %></p>
     </div>
   </div>
 
