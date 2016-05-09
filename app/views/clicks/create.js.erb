@@ -1,8 +1,15 @@
 $(function()  {
+  // Disable button to prevent multiple submits.
+  $("#button").prop('text', 'Clicked...');
+  $("#button").attr("disabled", true);
   // Display flash notice
   $('#flash').show(function(){
   setTimeout(function(){
+    // Callback to hide flash
     $('#flash').hide('slow');
+    // and re-enable the button.
+    $("#button").prop('text', 'Click me!');
+    $("#button").attr("disabled", false);
   }, 3000);
  });
   $("#flash").html("<%= escape_javascript(render :partial => 'layouts/flash' , :locals => { :flash => flash }).html_safe %>");
@@ -58,6 +65,10 @@ $(function()  {
             y: <%= Click.count_from(Date.today) %>,
         }]
     }]
-
   });
 });
+
+// $(document).ajaxComplete(function() {
+  // $("#button").prop('text', 'Click me!');
+  // $("#button").attr("disabled", false);
+// });
