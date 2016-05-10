@@ -49,6 +49,7 @@ group :development, :test do
   gem 'quiet_assets', '~> 1.1'
   gem 'fabrication', '~> 2.15'
   gem 'faker', '~> 1.6', '>= 1.6.3'
+  gem 'rspec-rails', '~> 3.0'
 end
 
 group :development do
