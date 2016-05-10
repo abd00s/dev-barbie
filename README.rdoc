@@ -10,7 +10,7 @@ In order to set up, please run the following commands:
 
 * <tt>bundle</tt>
 
-* <tt>rake:db:create</tt>
+* <tt>rake db:create</tt>
 
 * <tt>rails s</tt>
 
@@ -20,5 +20,10 @@ At this point you should have 3 regular users and 1 admin, as well as some simul
 
 
 In order to run the spec suite, please run the <tt>rspec</tt> command from within the app directory.
+
+====Known issues
+* Creating/Updating a User from the RailsAdmin panel does not allow for assigning of admin privileges. The <tt>.is_admin?</tt> attribute is not part of Devise and so does not persist. Further investigation was not possible with time constraint.
+
+* Timezone is hard coded for Eastern Canada.
 
 <em>Happy clicking.</em>
