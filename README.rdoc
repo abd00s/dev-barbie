@@ -1,28 +1,24 @@
 == README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is part of my submission for devBBQ's Junior Software Developer position application.
 
-Things you may want to cover:
+In order to set up, please run the following commands:
 
-* Ruby version
+* <tt>git clone git@github.com:abd00s/dev-barbie.git</tt>
 
-* System dependencies
+* <tt>cd dev-barbie</tt>
 
-* Configuration
+* <tt>bundle</tt>
 
-* Database creation
+* <tt>rake:db:create</tt>
 
-* Database initialization
+* <tt>rails s</tt>
 
-* How to run the test suite
+<b>Important:</b> Remember to add the provided <tt>secrets.yml</tt> into the <tt>config/</tt> directory. You can modify target email from there as well. Please also ensure you have a MySQL connection running.
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+At this point you should have 3 regular users and 1 admin, as well as some simulated click events. You can log in as the administrator with <tt>admin@shrimp.io</tt> and <tt>123456</tt> after pointing your browser to <tt>http://localhost:3000/</tt>.
 
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+In order to run the spec suite, please run the <tt>rspec</tt> command from within the app directory.
+
+<em>Happy clicking.</em>
