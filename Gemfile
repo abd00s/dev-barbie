@@ -50,6 +50,7 @@ group :development, :test do
   gem 'fabrication', '~> 2.15'
   gem 'faker', '~> 1.6', '>= 1.6.3'
   gem 'rspec-rails', '~> 3.0'
+  gem 'capybara', '~> 2.7', '>= 2.7.1'
 end
 
 group :development do
