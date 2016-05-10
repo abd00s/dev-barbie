@@ -65,5 +65,13 @@ describe "home/index.html.erb" do
         expect(page).to have_content('Admin Panel')
       end
     end
+
+    context "when the button is pressed" do
+      it "creates a new Click" do
+        login_as(signed_in_admin)
+        visit home_index_path
+        expect {find_by_id('button').click }.to change {Click.count}.by(1)
+      end
+    end
   end
 end
