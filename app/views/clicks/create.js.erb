@@ -62,7 +62,7 @@ $(function()  {
             y: $('#chart').data('countm1'),
         }, {
             name: 'Today',
-            y: <%= Click.count_from(Date.today) %>,
+            y: <%= Click.count_from(Date.current) %>,
         }]
     }]
   });
