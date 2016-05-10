@@ -1,7 +1,11 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-#
-# Examples:
-#
-#   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-#   Mayor.create(name: 'Emanuel', city: cities.first)
+[Click, User].each{|model| model.destroy_all}
+# Create an Admin user
+Fabricate(:user, email: "admin@shrimp.io", is_admin?: true) do
+  clicks(count:10) { Fabricate(:click) }
+end
+# Create 3 regular users
+3.times do
+  Fabricate(:user) do
+    clicks(count:10) { Fabricate(:click) }
+  end
+end
