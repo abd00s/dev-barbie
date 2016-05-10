@@ -10,7 +10,7 @@ In order to set up, please run the following commands:
 
 * <tt>bundle</tt>
 
-* <tt>rake db:create</tt>
+* <tt>rake db:setup</tt>
 
 * <tt>rails s</tt>
 
